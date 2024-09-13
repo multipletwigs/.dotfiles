@@ -11,6 +11,10 @@ if true then return {} end
 return {
   -- add gruvbox
   { "ellisonleao/gruvbox.nvim" },
+  {
+    "mfussenegger/nvim-dap",
+    config = function() end,
+  },
 
   -- Configure LazyVim to load gruvbox
   {
