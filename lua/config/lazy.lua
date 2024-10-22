@@ -15,12 +15,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  {
-    "laytan/tailwind-sorter.nvim",
-    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-lua/plenary.nvim" },
-    build = "cd formatter && npm ci && npm run build",
-    config = true,
-  },
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
