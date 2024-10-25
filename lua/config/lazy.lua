@@ -18,7 +18,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-      colorscheme = "everforest",
+      colorscheme = "base2tone_sea_dark",
     } },
 
     { import = "plugins" },
