@@ -18,7 +18,7 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-      colorscheme = "everforest",
+      colorscheme = "base2tone_drawbridge_dark",
     } },
 
     { import = "plugins" },
@@ -53,5 +53,13 @@ require("lazy").setup({
     },
   },
 })
+
+vim.api.nvim_create_user_command("FourTermGrid", function()
+  require("dev.patlytics-dev").start()
+end, {})
+
+vim.api.nvim_create_user_command("DBlocal", function()
+  require("dev.localdb").start()
+end, {})
 
 require("avante_lib").load()
