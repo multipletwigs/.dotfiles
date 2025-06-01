@@ -16,11 +16,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins", opts = {
-      colorscheme = "base2tone_drawbridge_dark",
+      colorscheme = "everforest",
     } },
-
+    { import = "lazyvim.plugins.extras.lang.python" },
     { import = "plugins" },
   },
   defaults = {
@@ -54,7 +53,7 @@ require("lazy").setup({
   },
 })
 
-vim.api.nvim_create_user_command("FourTermGrid", function()
+vim.api.nvim_create_user_command("DevTermGrid", function()
   require("dev.patlytics-dev").start()
 end, {})
 

@@ -4,11 +4,3 @@
 
 -- ToggleTerm mappings
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { desc = "Toggle terminal" })
-
--- Tailwind keybinds
-vim.keymap.set("n", "<leader>ts", function()
-  require("tailwind-sorter").sort()
-end, { desc = "Sort Tailwind classes" })
-vim.keymap.set("v", "<leader>ts", function()
-  require("tailwind-sorter").sort()
-end, { desc = "Sort Tailwind classes in selection" })
