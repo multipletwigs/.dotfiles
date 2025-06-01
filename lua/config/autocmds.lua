@@ -43,3 +43,31 @@ function Setup_Autosave(debounce_ms)
 end
 
 Setup_Autosave(1000)
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    local arg = vim.fn.argv(0)
+    if type(arg) == "table" then
+      arg = arg[1]
+    end
+    if arg and type(arg) == "string" and vim.fn.isdirectory(arg) == 1 then
+      vim.cmd("cd " .. arg)
+    end
+
+    vim.defer_fn(function()
+      if package.loaded["avante"] then
+        require("avante.api").refresh()
+      end
+    end, 100)
+  end,
+})
+
+vim.api.nvim_create_autocmd("DirChanged", {
+  callback = function()
+    vim.defer_fn(function()
+      if package.loaded["avante"] then
+        require("avante.api").refresh()
+      end
+    end, 100)
+  end,
+})
