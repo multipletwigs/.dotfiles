@@ -6,6 +6,7 @@ require("mason-lspconfig").setup({
     "jsonls",
     "html",
     "cssls",
+    "pyright",
   },
   automatic_installation = true,
 })

@@ -42,7 +42,7 @@ function Setup_Autosave(debounce_ms)
   })
 end
 
-Setup_Autosave(1000)
+-- Setup_Autosave(1000)
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()

@@ -60,5 +60,3 @@ end, {})
 vim.api.nvim_create_user_command("DBlocal", function()
   require("dev.localdb").start()
 end, {})
-
-require("avante_lib").load()
