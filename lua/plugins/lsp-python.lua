@@ -15,7 +15,7 @@ return {
     },
   },
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     opts = function(_, opts)
       -- Remove python-lsp-server from ensure_installed if it exists
       if opts.ensure_installed then
